@@ -1,6 +1,6 @@
 import React from "react";
 import Loading from "./Loading";
-import { Alert } from "react-native";
+import { Alert,Text } from "react-native";
 import * as Location from "expo-location";
 import axios from "axios";
 import Weather from "./Weather";
@@ -36,8 +36,8 @@ const App = () => {
     <Loading />
   ) : (
     <Weather
-      temp={Math.round(wData.main.temp)}
-      condition={wData.weather[0].main}
+    temp={Math.round(wData.main.temp)}
+    condition={wData.weather[0].main}
     />
   );
 };

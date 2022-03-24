@@ -8,10 +8,16 @@ const Weather = ({ temp, condition }) => {
       style={styles.container}
       colors={["#4c669f", "#3b5998", "#192f6a"]}
     >
-      {/* <StatusBar barStyle="light-content" /> */}
+      <StatusBar barStyle="light-content" />
       <View style={styles.halfContainer}>
         <vIcon.Feather name="sun" size={90} color="white" />
         <Text style={styles.temp}>{temp}℃</Text>
+        <Text style={styles.locationText}>
+        Current
+        </Text> 
+        <Text style={styles.locationText}>
+        Soul
+        </Text>
       </View>
       <View style={styles.halfContainer}></View>
     </LinearGradient>
@@ -34,5 +40,10 @@ const styles = StyleSheet.create({
     padding: 10,
     color: "white",
   },
+  locationText : {
+    fontSize: 20,
+    padding: 10,
+    color : "white",
+  }
 });
 export default Weather;
